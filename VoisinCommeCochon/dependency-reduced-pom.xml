@@ -54,25 +54,6 @@
         </executions>
       </plugin>
       <plugin>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.0</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <transformers>
-            <transformer>
-              <mainClass>com.voisincommecochon.voisincommecochon.HelloApplication</mainClass>
-            </transformer>
-          </transformers>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
@@ -86,6 +67,13 @@
           </execution>
         </executions>
         <configuration>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>META-INF/MANIFEST.MF
+                                META-INF/LICENSE</excludes>
+            </filter>
+          </filters>
           <executable>jpackage</executable>
           <arguments>
             <argument>--name</argument>
