@@ -42,7 +42,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.voisincommecochon.voisincommecochon/com.voisincommecochon.voisincommecochon.HelloApplication</mainClass>
+              <mainClass>com.voisincommecochon.voisincommecochon/com.voisincommecochon.voisincommecochon.Main</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
