@@ -17,6 +17,15 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/LICENSE</exclude>
+                  </excludes>
+                </filter>
+              </filters>
               <transformers>
                 <transformer>
                   <mainClass>com.voisincommecochon.voisincommecochon.Main</mainClass>
@@ -67,13 +76,6 @@
           </execution>
         </executions>
         <configuration>
-          <filters>
-            <filter>
-              <artifact>*:*</artifact>
-              <excludes>META-INF/MANIFEST.MF
-                                META-INF/LICENSE</excludes>
-            </filter>
-          </filters>
           <executable>jpackage</executable>
           <arguments>
             <argument>--name</argument>
